@@ -1,8 +1,8 @@
 # Name of the program.
-NAME     := piter
+NAME     := iter
 
 # Sources and objects.
-SRCS     := iter.cpp
+SRCS     := main.cpp
 OBJS     := $(SRCS:.cpp=.o)
 
 # Define all the compiling flags.

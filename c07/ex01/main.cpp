@@ -1,24 +1,4 @@
-
-#include <string>
-#include <iostream>
-
-template<typename T, typename S>
-void iter(T tab[], S taille, T (*p)(T))
-{
-	for (S i = 0; i < taille; i++)
-		tab[i] = p(tab[i]);
-}
-
-template<typename T>
-T addTwo(T nbr)
-{
-	return (nbr + 2);
-}
-
-char toUP(char c)
-{
-	return (std::toupper(c));
-}
+#include "iter.hpp"
 
 int main(void)
 {
@@ -36,19 +16,21 @@ int main(void)
 	}
 	{
 		std::cout << "============================= 2 =================================" << std::endl;
-		char *s = new char[5];
-		s[0] = 'a';
-		s[1] = 'b';
-		s[2] = 'c';
-		s[3] = 'd' ;
-		s[4] = 0;
+		std::string *s = new std::string[5];
+		s[0] = "one";
+		s[1] = "two";
+		s[2] = "three";
+		s[3] = "four" ;
+		s[4] = "five";
 
-		int taille = 4;
-		std::cout << s << std::endl;
+		int taille = 5;
+		for (int i = 0; i < taille; i++)
+			std::cout << s[i] << std::endl;
 	std::cout << "--------------- ToUP ----------" << std::endl;
-	::iter<char, int>(s, taille, toUP);
-		std::cout << s << std::endl;
-		delete s;
+	::iter<std::string, int>(s, taille, toUP);
+		for (int i = 0; i < taille; i++)
+			std::cout << s[i] << std::endl;
+		delete[] s;
 	}
 	return (0);
 }

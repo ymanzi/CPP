@@ -75,3 +75,8 @@ int Span::longestSpan(void)
 	int r= abs(_vec.front() - _vec.back());
 	return (r);
 }
+
+std::vector<int>&	Span::getVec()
+{
+	return (_vec);
+}
