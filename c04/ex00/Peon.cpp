@@ -19,7 +19,7 @@ Peon::Peon(std::string name): Victim(name)
 
 Peon::Peon(Peon const& other): Victim(other)
 {
-	std::cout << "Amazing Peon copied !!" << std::endl;
+	std::cout << "Zog zog." << std::endl;
 }
 
 Peon::~Peon(void)

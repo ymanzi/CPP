@@ -19,7 +19,7 @@ Victim::Victim(std::string name): _name(name)
 
 Victim::Victim(Victim const &other): _name(other._name)
 {
-	std::cout << "A new Victim, randomly copied Created !!" << std::endl;
+	std::cout << "Some random victim called " << _name << " just appeared! " << std::endl;  
 }
 
 Victim& Victim::operator=(Victim const &other)

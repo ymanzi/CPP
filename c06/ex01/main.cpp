@@ -33,20 +33,20 @@ std::string	get_random_string(int n)
 
 void *serialize(void)
 {
-	Data	*d;
+	int		j;
+	char	*d;
 	
-	d = new Data;
+	d = new char[20];
 	std::string carac = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 
-	/*for (int i = 0; i < 7; i++)
-	{
-		d->s1 += carac[std::rand() % carac.length()];
-		d->s2 += carac[std::rand() % carac.length()];
-	}*/
-	d->n = std::rand();
-	d->s1 += get_random_string(8);
-	d->s2 += get_random_string(8);
-	return (d);
+	for (int i = 0; i < 7; i++)
+		d[i] = carac[std::rand() % carac.length()];
+	d[7] = 0;
+	d[8] = int(std::rand());
+	for (int i = 13; i < 19; i++)
+		d[i] = carac[std::rand() % carac.length()];
+	d[19] = 0;
+	return (reinterpret_cast<void*>(d));
 }
 
 Data* deserialize(void* raw)

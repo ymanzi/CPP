@@ -30,12 +30,12 @@ protected:
 	unsigned int	_armorDamageReduction;
 
 public:
-	ClapTrap( std::string name);
+	ClapTrap( std::string name = "Clap");
 	ClapTrap(unsigned int hitPoints, unsigned int maxHitPoints, unsigned int energyPoints, unsigned int maxEnergyPoints,
 			unsigned int level, std::string name, unsigned int meleeAttackDamage, unsigned int rangedAttackDamage,
 			unsigned int armorDamageReduction);
 	ClapTrap( ClapTrap const& other);
-	~ClapTrap( void );
+	virtual ~ClapTrap( void );
 	ClapTrap &operator=(ClapTrap const& other);
 
 	void	takeDamage(unsigned int amount);

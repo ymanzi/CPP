@@ -23,7 +23,7 @@ class Enemy
 		std::string	_type;
 
 	public:
-		Enemy(int hp, std::string const& type);
+		Enemy(int hp = 10, std::string const& type = "Basic");
 		Enemy(Enemy const& other);
 		Enemy& operator=(Enemy const& other);
 		virtual ~Enemy(void);

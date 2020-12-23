@@ -10,9 +10,9 @@
 class NinjaTrap : public virtual ClapTrap
 {
 public:
-	NinjaTrap( std::string name);
+	NinjaTrap( std::string name = "Ninja");
 	NinjaTrap( NinjaTrap const& other);
-	~NinjaTrap( void );
+	virtual ~NinjaTrap( void );
 	NinjaTrap &operator=(NinjaTrap const& other);
 	void	rangedAttack(std::string const& target);
 	void	meleeAttack(std::string const& target);

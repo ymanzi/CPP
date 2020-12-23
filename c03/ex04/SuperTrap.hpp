@@ -20,9 +20,9 @@
 class SuperTrap : public virtual FragTrap, public virtual NinjaTrap
 {
 public:
-	SuperTrap( std::string name);
+	SuperTrap( std::string name = "SuperT");
 	SuperTrap( SuperTrap const& other);
-	~SuperTrap( void );
+	virtual ~SuperTrap( void );
 	SuperTrap &operator=(SuperTrap const& other);
 	void	rangedAttack(std::string const& target);
 	void	meleeAttack(std::string const& target);

@@ -24,7 +24,7 @@ private:
 	int			_damage;
 
 public:
-	AWeapon(std::string const &name, int apcost, int damage);
+	AWeapon(std::string const &name = "Arme", int apcost = 5, int damage = 5);
 	virtual ~AWeapon();
 	AWeapon(AWeapon const &other);
 	AWeapon &operator=(AWeapon const &other);

@@ -28,7 +28,7 @@ Sorcerer::~Sorcerer( void )
 
 Sorcerer::Sorcerer(Sorcerer const& other): _name(other._name), _title(other._title)
 {
-	std::cout << "Nobody will ever look like ME !! Ohhhh We are the same >___<'' " << std::endl;
+	std::cout << _name << ", " << _title << ", is born!" << std::endl;
 }
 
 Sorcerer &Sorcerer::operator=(Sorcerer const& other)

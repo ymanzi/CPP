@@ -30,7 +30,7 @@ public:
 	Character(std::string const &name = "SuperHuman");
 	Character(Character const& other);
 	Character& operator=(Character const& other);
-	~Character(void);
+	virtual ~Character(void);
 
 	void				recoverAP(void);
 	void				equip(AWeapon *weapon);

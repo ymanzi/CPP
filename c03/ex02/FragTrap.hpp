@@ -19,9 +19,9 @@ class FragTrap : public ClapTrap
 {
 
 public:
-	FragTrap( std::string name);
+	FragTrap( std::string name = "Frag");
 	FragTrap( FragTrap const& other);
-	~FragTrap( void );
+	virtual ~FragTrap( void );
 	FragTrap &operator=(FragTrap const& other);
 	void	rangedAttack(std::string const& target);
 	void	meleeAttack(std::string const& target);

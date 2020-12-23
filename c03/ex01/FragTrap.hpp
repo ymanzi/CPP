@@ -30,7 +30,7 @@ private:
 	unsigned int	_armorDamageReduction;
 
 public:
-	FragTrap( std::string name);
+	FragTrap( std::string name = "Frag");
 	FragTrap( FragTrap const& other);
 	~FragTrap( void );
 	FragTrap &operator=(FragTrap const& other);

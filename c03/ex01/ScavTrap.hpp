@@ -30,7 +30,7 @@ private:
 	unsigned int	_armorDamageReduction;
 
 public:
-	ScavTrap( std::string name);
+	ScavTrap( std::string name = "Scav");
 	ScavTrap( ScavTrap const& other);
 	~ScavTrap( void );
 	ScavTrap &operator=(ScavTrap const& other);

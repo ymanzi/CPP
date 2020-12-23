@@ -22,16 +22,7 @@ FragTrap::FragTrap( std::string name): _hitPoints(100), _maxHitPoints(100), _ene
 FragTrap::FragTrap( FragTrap const& other)
 {
 	std::cout << "Copy Constructor Called!" << std::endl;
-
-	_hitPoints = other._hitPoints;
-	_maxHitPoints = other._maxHitPoints;
-	_energyPoints = other._energyPoints;
-	_maxEnergyPoints = other._maxEnergyPoints;
-	_level = other._level;
-	_name = other._name;
-	_meleeAttackDamage = other._meleeAttackDamage;
-	_rangedAttackDamage = other._rangedAttackDamage;
-	_armorDamageReduction = other._armorDamageReduction;
+	*this = other;
 }
 
 FragTrap::~FragTrap( void )
